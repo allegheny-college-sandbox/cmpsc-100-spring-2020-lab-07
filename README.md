@@ -1,10 +1,10 @@
-# CMPSC 100-02 Lab Session 6: G. Wiz and the magical test generator
+# CMPSC 100-02 Lab Session 7: HumanQuest, Part 1
 
-* Assigned: 20 February 2020
-* Due: 27 February 2020 by 2:30 PM
-* Point value: 35
+* Assigned: 27 February 2020
+* Due: 12 March 2020
+* Point value: 45
 
-This lab combines learning about the `Scanner` and `Random` classes in order to solve a problem using `String`s, `int`s, and other concepts we continue to practice such as `git`, and basic Java programming. In addition to basic technical skills, this lab also practices _design thinking_.
+During this session, we expand our knowledge about Java as an object-oriented language
 
 * [Slack](https://cmpsc-100-02-sp-2020.slack.com)
 * [GitHub](https://www.github.com)
@@ -18,7 +18,7 @@ This lab combines learning about the `Scanner` and `Random` classes in order to 
 ## Table of Contents
 
 * [Accepting the assignment](#accepting-the-assignment)
-* [Activity: G. Wiz and the magical test generator](#g-wiz-and-the-magical-test-generator)
+* [Activity: HumanQuest](#HumanQuest)
 * [Evaluation](#evaluation)
 * [GatorGrader](#gatorgrader)
 
@@ -39,71 +39,38 @@ I recommend reading the [GitHub Guides](https://guides.github.com) which GitHub 
 * [Documenting your projects on GitHub](https://guides.github.com/features/wikis/)
 * [GitHub Handbook](https://guides.github.com/introduction/git-handbook/)
 
-## G. Wiz and the magical test generator
+## HumanQuest
 
-![KABOOM](https://raw.githubusercontent.com/allegheny-college-sandbox/cmpsc-100-spring-2020-lab-06/media/media/g-wiz-test-explosion.png)
+![Intrepid? Hero?](https://raw.githubusercontent.com/allegheny-college-sandbox/cmpsc-100-spring-2020-lab-07/media/media/g-wiz-humanquest.png)
 
-As a side job to his current gig as an adjunct professor in the wizard department at Reptile State ("2-4-6-8 We've Even Got Invertebrates!"), G. Wiz joined the Wizard Animal Certification (WAC) examination board. Part of their responsibilities involves writing test questions for the annual licensure and certification test. G. Wiz is responisble for the potion word problems.
+As a gator who falls prey to the latest trends sweeping the Gator Kingdom, G. Wiz and his friends Slippy Toad, Frogger, and Lyle Crocodile find themselves caught up in playing _HumanQuest_, a game in which the friends form a party and role-play mundane human jobs and tasks. After a marathon session over over 10 hours, the crew confronts a final challenge in the adventure and must defeat it or their party's work is doomed! They only have one chance, and they're relying on their luck for success.
 
-While it takes _some_ work, most members don't find that it takes too much of their time. However, G. Wiz wants to spend _as little time as possible_ in order to focus the income on buying hats, books, and the newest kingdom craze: playing _HumanQuest_. In order to do this, they need a test generator that can generate new questions and answers on demand. 
+* G. Wiz chose to play a `janitor`, and when they roll dice for any challenge, they use a four-sided die (`d4`)
+* Slippy Toad plays a `middle manager`, and when they roll dice for challenges, they use a six-sided die (`d6`)
+* Frogger, the practical one of the group, plays a `software developer` -- which uses an eight-sided die (`d8`)
+* Lyle, a late-comer to the group, chose to play a `consultant`, a role which decides everything with a coin flip (`d2`)
 
-That's where you come in.
+In contrast, the challenge requires rolling _one_ die, the total sides of which are stored in the `quest.stats` file in the `input` directory as an integer. _The sum_ of all of the party's rolls must be greater than (not equal to) the difficulty of the challenge. Both the challenge difficulty and name have been provided to you in the above-referenced file. You must first read and store these values.
 
-G. Wiz's question format looks like this (provided for you in a file):
+Each die must be an `instance` of class `Die` -- in which you will need to complete the code. The `HumanQuest.java` file scripts the encounter, and relies upon the `Die` `reference type` to do so.
 
-```
-In {PLACE}, {JOB}s are going wild over {POTION} potions. In order to meet the demand, you need to make more of them. Among other ingredients, the recipe requires {OUNCES} ounces of {INGREDIENT}. If the recipe makes {QUANTITY} potions, how many potions does {AMOUNT} ounces make?
-```
-
-Your job is to fill in each of the _tokenized_ parts of the string (e.g. `{PLACE}`) with a combination user input and random numbers.
-
-| Token      | Type  | Source | Limit |
-|------------|-------|--------|-------|
-|{PLACE}     |String |Input   |       |
-|{JOB}       |String |Input   |       |
-|{POTION}    |String |Input   |       |
-|{OUNCES}    |Double |Random  | 50    |
-|{INGREDIENT}|String |Input   |       |
-|{QUANTITY}  |Integer|Random  | 10    |
-|{AMOUNT}    |Double |Random  | 100   |
-
-A successful generation should look like the following:
-
-```
-WIZARD TEST QUESTION GENERATOR
-
-Enter the name of a fictional place: Gatortown
-Enter the singular form of a type of job: wizard
-Enter the title of a potion: thumb acquisition
-Enter the name of an ingredient: crushed beetle
-
-In Gatortown, wizards are going wild over thumb acquisition potions. In order to meet the demand, you need to make more of them. Among other ingredients, the recipe requires 4.302752163991519 ounces of crushed beetle. If the recipe makes 5 potions, how many potions does 75.93142876469676 ounces make?
-
-> 85
-```
-
-### Note
-
-Given the random nature of `Random`, it is possible that your generator will create questions where the answer is `0`. This is valid, as G. Wiz wants to be tricky on occasion. However, your problem shouldn't generate any _negative_ numbers.
+You and your heroes will need the best of luck to overcome this challenge!
 
 ## Evaluation
 
-### `WizardTest.java`
+### `HumanQuest.java`
 
 - [ ] Contains no:
     * `TODO` markers
     * `{Your Name Here}` markers
-- [ ] Use of a `Scanner` to take input from the keyboard
-- [ ] Use of the `nextLine` method to process user input at prompts
-- [ ] Use of at least one instance of `Random` to generate numbers
-- [ ] Use of the `nextDouble` and `nextInt` methods of `Random` to provide an appropriate amount and type of numbers
-- [ ] Use of the `String` methods `replace` and `valueOf`
-- [ ] Correct math to print the answer to the problem below the prompt
-- [ ] Use of at least one `cast`
-    * Hint #1: the correct type to cast has to do with the data type of the answer and that of the data generated by `nextDouble`
-    * Hint #2: remember that, unless we do some complicated magic that we haven't seen yet, Java _does not_ round (and we don't need to here)
-- [ ] Single-line comments marking each part of the program (minimum `10`)
-- [ ] Output similar to that pictured above
+- [ ] Scans input from the `input/quest.stats` file
+- [ ] Creates the sufficient
+
+### `Die.java`
+
+- [ ] Contains no:
+    * `TODO` markers
+    * `{Your Name Here}` markers
 
 ### `reflection.md`
 
@@ -141,7 +108,7 @@ Given the random nature of `Random`, it is possible that your generator will cre
 - [ ] Once in the labs folder, "clone" the repository using the link copied above
 * If I (the instructor) were to clone my own repository, I'd enter (your link will look different):
 ```
-git clone git@github.com:allegheny-college-cmpsc-100-spring-2020/cmpsc-100-spring-2020-lab-06-dluman
+git clone git@github.com:allegheny-college-cmpsc-100-spring-2020/cmpsc-100-spring-2020-lab-07-dluman
 ```
 
 ## GatorGrader
@@ -174,7 +141,7 @@ You will use this command to grade your work before you turn it in, enabling you
 #### Running GatorGrader directly on `container` start
 
 - [ ] `cd` to your `CMPSC100` folder
-- [ ] Locate the `cmpsc-100-spring-2020-lab-06` folder and `cd` to it.
+- [ ] Locate the `cmpsc-100-spring-2020-lab-07` folder and `cd` to it.
     * Remember that if you run `ls -la`, you should see a `.git` folder if you're in the main repository folder.
 - [ ] To make sure you're in the right repository, type `pwd` and press `Enter`
     * If you recieve the expected path, you're in the right place!
@@ -197,7 +164,7 @@ docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname Ga
 The GitHub platform is a place to store your work. So, it makes some sense that should be able to _clone_ (download) from it, and push back (upload) to it. Here, we'll learn this second part.
 
 - [ ] `cd` to your `CMPSC100` folder
-- [ ] Locate the `cmpsc-100-spring-2020-lab-06` folder and `cd` to it.
+- [ ] Locate the `cmpsc-100-spring-2020-lab-07` folder and `cd` to it.
 
 Once in this folder, we need to tell git that there have been changes.
 

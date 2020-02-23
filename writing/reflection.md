@@ -1,21 +1,31 @@
 # Lab 7 reflection: Solution Repository
 
-## Discuss the relationship between an object like a `Scanner` and storing values in variables.
+## This lab demonstrates `classes` and `objects`. Describe the difference between them using examples.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
 
-## This lab asked you to use methods new methods of `String`. Describe how you applied your knowledge of objects and methods (specifically `String` objects) to complete the request.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
-
-## What additional `classes` did we have to bring into this program? What do they do?
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
-
-## In the code block below, paste one example of a statement that `initialized` an object. Describe which object you created and what "powers" it made available to you. Why did you need to use it?
+## Paste the `constructor` of the `Die` class below. Describe the purpose of this method and how it works.
 
 ```java
-Random generator = new Random();
+public Die(int sides) {
+  this.sides = sides;
+  this.random = new Random();
+}
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
+
+### What does the `this` keyword do? Why is it important?
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
+
+## In the code block below, copy and paste a method from `Die.java` that has a `return type`. Describe why its `return type` is appropriate.
+
+```java
+public int roll() {
+  this.result = this.random.nextInt(this.sides) + 1;
+  return this.result;
+}
 ```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non posuere arcu. Donec vehicula molestie nibh, eu pulvinar felis. Morbi tempus augue quis dui semper, ac ornare neque pharetra. Praesent bibendum libero dui, quis mollis orci rutrum eget. Maecenas est risus, blandit eget vestibulum sit amet, suscipit at erat. Suspendisse sed mollis nisi. In vel egestas lectus. Maecenas lacinia tempus dui id porttitor. Mauris id velit finibus, iaculis metus nec, blandit erat. Donec volutpat lacus risus, sed dictum elit venenatis eget. Quisque pharetra ullamcorper sem in finibus. Donec urna erat, pulvinar id nibh eu, facilisis porttitor diam. Nullam facilisis ac sem non bibendum?
