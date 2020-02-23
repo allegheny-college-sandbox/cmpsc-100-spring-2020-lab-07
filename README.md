@@ -88,6 +88,16 @@ The party defeated the paper jam: false
 - [ ] Contains no:
     * `TODO` markers
     * `{Your Name Here}` markers
+- [ ] Implements a complete `constructor` method which:
+    * Accepts 1 argument, an `int` parameter called `sides`
+    * Sets `instance` ("global") variables `sides` and `random`
+- [ ] Implements a complete `roll` ("setter") method which:
+    * Takes no arguments
+    * Assigns the `instance` ("global") variable `result` to the result of the `nextInt` of the class' `Random` object-oriented
+- [ ] Implements a complete `getRoll` ("getter") method which:
+    * Returns the `instance` variable `result` in `int` form
+- [ ] Implements a complete `toString` method which:
+    * Returns the `instance` variable `result` in `String` form
 
 ### `reflection.md`
 
