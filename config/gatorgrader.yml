@@ -16,18 +16,18 @@ src/main/java/labseven:
         MatchFileFragment --fragment "new Die(" --count 5 --exact
         MatchFileFragment --fragment ".roll()" --count 5 --exact
         MatchFileFragment --fragment ".getRoll()" --count 5 --exact
-        MatchFileFragment --fragment "boolean" --count 1 --exact
+        MatchFileFragment --fragment "boolean" --count 1
         
 src/main/java/labseven:
     Die.java:
         ConfirmFileExists
         MatchFileFragment --fragment "TODO" --count 0 --exact
-        MatchFileFragment --fragment "{YOUR NAME HERE} --count 0 --exact
+        MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
         MatchFileFragment --fragment "this.sides" --count 2
         MatchFileFragment --fragment "this.result" --count 3 --exact
         MatchFileFragment --fragment "public String toString()" --count 1 --exact
         MatchFileFragment --fragment "this.random" --count 2
-        MatchFileFragment --fragment "int sides" --count 1 --exact
+        MatchFileFragment --fragment "(int sides)" --count 1 --exact
 
 writing:
     reflection.md:
