@@ -64,7 +64,24 @@ You and your heroes will need the best of luck to overcome this challenge!
     * `TODO` markers
     * `{Your Name Here}` markers
 - [ ] Scans input from the `input/quest.stats` file
-- [ ] Creates the sufficient
+- [ ] Creates the sufficient amount of `Die` objects to accommodate:
+    * The challenge roll
+    * G. Wiz's roll
+    * Slippy Toad's roll
+    * Frogger's roll
+    * Lyle's roll
+- [ ] Compares the _total_ of these rolls against the challenge's roll in order to determine a `true`/`false` value representing the party's defeat of the challenge "boss"
+- [ ] Prints the result of each roll and matches the general output pictured here:
+
+```
+The party must beat the  Paper Jam's roll: 13
+G. Wiz rolls: 1
+Slippy rolls: 4
+Frogger rolls: 7
+Lyle rolls: 1
+The party's total roll: 13
+The party defeated the paper jam: false
+```
 
 ### `Die.java`
 

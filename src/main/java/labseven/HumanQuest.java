@@ -60,6 +60,6 @@ public class HumanQuest {
     
     // Print Total roll and comparison to monster roll
     System.out.println("The party's total roll: " + total);
-    System.out.println("Does the party beat the " + monster + "? " + winsEncounter);
+    System.out.println("The party defeated the " + monster + ": " + winsEncounter);
   }
 }
