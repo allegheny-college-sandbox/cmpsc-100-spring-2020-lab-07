@@ -36,8 +36,11 @@ writing:
         CountFileWords --count 350
         CountFileParagraphs --count 7
         MatchFileFragment --fragment "TODO" --count 0 --exact
-        CountMarkdownTags --tag "code_block" --count 1 --exact
+        CountMarkdownTags --tag "code_block" --count 4
         MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
         
 CountCommits --count 3
 ExecuteCommand --command "gradle build"
+ExecuteCommand --command "gradle -q --console plain run"
+MatchCommandRegex --command "gradle -q --console plain run" --regex "([0-9])?[0-9]" --count
+MatchCommandRegex --command "gradle -q --console plain run" --regex "true|false" --count 1 --exact
